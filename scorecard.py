@@ -23,16 +23,16 @@ class Scorecard:
     """Accumulate scores and compute their average."""
 
     def __init__(self):
-        """Iniiialize a new Scorecard."""
+        """Initialize a new Scorecard."""
         self.scores = []
 
-    def add_score(self, score):
+    def add_score(self, score: float) -> None:
         """Add a score to the Scorecard."""
         self.scores.append(score)
 
     def average(self):
         """Return the average of all scores, 0 if no scores."""
-        return sum(self.scores)/max(1,len(self.scores))
+        return sum(self.scores)/max(1, len(self.scores))
 
 
 def print_scores(score_card):
