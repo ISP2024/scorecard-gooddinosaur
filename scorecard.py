@@ -24,7 +24,7 @@ class Scorecard:
 
     def __init__(self):
         """Initialize a new Scorecard."""
-        self.scores = []
+        self.scores: list[float] = []
 
     def add_score(self, score: float) -> None:
         """Add a score to the Scorecard."""
@@ -35,7 +35,7 @@ class Scorecard:
         return sum(self.scores)/max(1, len(self.scores))
 
 
-def print_scores(score_card):
+def print_scores(score_card) -> None:
     """Print statistics for the scorecard and the actual scores."""
 
     # What changes to Scorecard are needed in order to make this code work?
