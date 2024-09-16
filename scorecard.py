@@ -35,7 +35,7 @@ class Scorecard:
         return sum(self.scores)/max(1, len(self.scores))
 
 
-def print_scores(score_card) -> None:
+def print_scores(score_card: list[float]) -> None:
     """Print statistics for the scorecard and the actual scores."""
 
     # What changes to Scorecard are needed in order to make this code work?
@@ -62,8 +62,8 @@ if __name__ == "__main__":
     print("Input 3 scores.")
     for count in range(1, 4):
         score = input(f"input {ordinal(count)} score: ")
-        scorecard.add_score(score)
+        scorecard.add_score(float(score))
 
-    print("The average is " + scorecard.average())
+    print("The average is ", scorecard.average())
 
     print_scores(scorecard)
