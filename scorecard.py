@@ -30,7 +30,7 @@ class Scorecard:
         """Add a score to the Scorecard."""
         self.scores.append(score)
 
-    def average(self):
+    def average(self) -> float:
         """Return the average of all scores, 0 if no scores."""
         return sum(self.scores)/max(1, len(self.scores))
 
@@ -60,7 +60,7 @@ if __name__ == "__main__":
     scorecard = Scorecard()
 
     print("Input 3 scores.")
-    for count in range(1,4):
+    for count in range(1, 4):
         score = input(f"input {ordinal(count)} score: ")
         scorecard.add_score(score)
 
