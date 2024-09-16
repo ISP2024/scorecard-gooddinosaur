@@ -22,7 +22,7 @@ Observe how the type hint helps it perform static checking.
 class Scorecard:
     """Accumulate scores and compute their average."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Initialize a new Scorecard."""
         self.scores: list[float] = []
 
@@ -46,7 +46,7 @@ def print_scores(score_card: list[float]) -> None:
         print(score)
 
 
-def ordinal(num):
+def ordinal(num: int) -> str:
     """Return the ordinal value of an integer; works for numbers up to 20.
 
     For examples: ordinal(1) is '1st', ordinal(2) is '2nd'.
