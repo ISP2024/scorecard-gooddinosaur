@@ -66,4 +66,4 @@ if __name__ == "__main__":
 
     print("The average is ", scorecard.average())
 
-    print_scores(scorecard)
+    print_scores(scorecard.scores)
